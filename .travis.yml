@@ -13,6 +13,14 @@ jobs:
       php: "8.1"
       env: "WP_VERSION=nightly WP_MULTISITE=0"
 
+    - name: "WP nightly - PHP 8.1snaphot"
+      php: "8.1snaphot"
+      env: "WP_VERSION=nightly WP_MULTISITE=0"
+
+    - name: "WP nightly - PHP nightly"
+      php: "nightly"
+      env: "WP_VERSION=nightly WP_MULTISITE=0"
+
 services:
   - "mysql"
 
