@@ -5,20 +5,17 @@ if: "branch = travis"
 language: "php"
 os:
   - "linux"
-dist: "bionic"
 
 jobs:
   include:
     - name: "WP nightly - PHP 5.6"
+      dist: "xenial"
       php: "5.6"
       env: "WP_VERSION=nightly WP_MULTISITE=0"
 
     - name: "WP nightly - PHP 8.1"
-      php: "8.1"
-      env: "WP_VERSION=nightly WP_MULTISITE=0"
-
-    - name: "WP nightly - PHP nightly"
-      php: "nightly"
+      dist: "bionic"
+      php: "8.1.0"
       env: "WP_VERSION=nightly WP_MULTISITE=0"
 
 services:
